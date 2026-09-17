@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://babarupneshwarnath.com/sitemap.xml

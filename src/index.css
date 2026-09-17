@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    /* The events carousel bleeds its scroll-snap track past the container edge
+       (for the "peek next card" effect) via negative margins, which widens its
+       own box beyond the viewport. Clipping here stops that from becoming
+       page-level horizontal scroll, without touching the carousel's own
+       overflow-x: auto — that keeps scrolling/swiping normally inside itself. */
+    overflow-x: hidden;
+    /* Belt-and-braces alongside overflow-x above: this specifically stops a
+       vertical scroll gesture (mouse wheel, trackpad, touch) from chaining
+       into horizontal motion/rubber-band, which overflow-x hidden alone does
+       not always cover on every browser/input combination. */
+    overscroll-behavior-x: none;
+  }
+
+  /* Respect the visitor's motion preference across every animation on the site. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-sand-50 font-sans text-ink-700 antialiased;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-ink-900;
+    text-wrap: balance;
+  }
+
+  /* Devanagari reads better in the Tiro face; swap headings when Hindi is active. */
+  html[lang='hi'] h1,
+  html[lang='hi'] h2,
+  html[lang='hi'] h3,
+  html[lang='hi'] h4,
+  html[lang='hi'] h5,
+  html[lang='hi'] h6,
+  html[lang='hi'] .font-display {
+    @apply font-devanagari;
+  }
+
+  /* One visible focus treatment everywhere — never removed, only restyled. */
+  :focus-visible {
+    @apply rounded-sm outline-none ring-2 ring-saffron-600 ring-offset-2 ring-offset-sand-50;
+  }
+
+  ::selection {
+    @apply bg-saffron-200 text-ink-900;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white shadow-soft ring-1 ring-sand-200;
+  }
+
+  .card-interactive {
+    @apply card transition duration-300 hover:-translate-y-1 hover:shadow-lift focus-within:-translate-y-1 focus-within:shadow-lift;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-saffron-600 text-white hover:bg-saffron-700 active:bg-saffron-800;
+  }
+
+  .btn-secondary {
+    @apply btn bg-night-800 text-sand-100 hover:bg-night-700 active:bg-night-900;
+  }
+
+  .btn-outline {
+    @apply btn border border-sand-400 bg-white/80 text-ink-800 hover:border-saffron-500 hover:bg-white hover:text-saffron-700;
+  }
+
+  .btn-ghost {
+    @apply btn px-4 py-2 text-ink-600 hover:bg-sand-100 hover:text-ink-900;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-saffron-700;
+  }
+
+  .prose-temple {
+    @apply max-w-prose text-base leading-[1.85] text-ink-600 sm:text-[17px];
+  }
+
+  .prose-temple > * + * {
+    @apply mt-5;
+  }
+
+  /* Horizontal scroll-snap track used by the events carousel. */
+  .snap-track {
+    @apply flex snap-x snap-mandatory overflow-x-auto scroll-smooth;
+    scrollbar-width: none;
+  }
+
+  .snap-track::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,260 @@
+/**
+ * English UI strings. This file is the source of truth for the key set —
+ * `hi.ts` must provide exactly the same keys (enforced by TypeScript).
+ */
+export const en = {
+  'site.name': 'Baba Rupneshwar Nath',
+  'site.nameFull': 'Baba Rupneshwar Nath Temple',
+  'site.mantra': 'Om Namah Shivaya',
+  'site.tagline': 'A place of stillness, devotion and the grace of Mahadev',
+
+  // ---------------------------------------------------------------- navigation
+  'nav.label': 'Main navigation',
+  'nav.home': 'Home',
+  'nav.about': 'About',
+  'nav.history': 'History',
+  'nav.darshan': 'Darshan-Aarti',
+  'nav.events': 'Events',
+  'nav.katha': 'Katha',
+  'nav.gallery': 'Gallery',
+  'nav.contact': 'Contact',
+  'nav.openMenu': 'Open main menu',
+  'nav.closeMenu': 'Close main menu',
+  'nav.menu': 'Menu',
+
+  // ---------------------------------------------------------------- common
+  'common.skipToContent': 'Skip to main content',
+  'common.readMore': 'Read more',
+  'common.viewDetails': 'View details',
+  'common.viewAll': 'View all',
+  'common.loadMore': 'Load more',
+  'common.search': 'Search',
+  'common.clear': 'Clear',
+  'common.all': 'All',
+  'common.date': 'Date',
+  'common.time': 'Time',
+  'common.location': 'Location',
+  'common.category': 'Category',
+  'common.share': 'Share',
+  'common.previous': 'Previous',
+  'common.next': 'Next',
+  'common.close': 'Close',
+  'common.minRead': 'min read',
+  'common.breadcrumb': 'Breadcrumb',
+  'common.placeholderNotice':
+    'Placeholder content — to be replaced with information verified by the temple committee.',
+  'common.sources': 'Sources & references',
+  'common.backToHome': 'Back to home',
+  'common.language': 'Language',
+  'common.switchToHindi': 'हिन्दी में देखें',
+  'common.switchToEnglish': 'View in English',
+
+  // ---------------------------------------------------------------- hero
+  'hero.welcome': 'Welcome to Baba Rupneshwar Nath Temple',
+  'hero.intro':
+    'An ancient seat of Shiva worship where devotees gather each day for darshan, aarti and quiet prayer. Sit a while, and let the bells do the rest.',
+  'hero.ctaPrimary': 'Plan your visit',
+  'hero.ctaSecondary': 'Explore Mahadev Katha',
+  'hero.imageAlt': 'The spire of Baba Rupneshwar Nath Temple against an evening sky',
+  'hero.scroll': 'Scroll to explore',
+
+  // ---------------------------------------------------------------- announcement
+  'announcement.eyebrow': 'Temple announcement',
+  'announcement.label': 'Important announcement',
+
+  // ---------------------------------------------------------------- darshan
+  'darshan.title': 'Darshan & Aarti Timings',
+  'darshan.subtitle':
+    'Daily timings for darshan and aarti at the temple. Timings may change on festival days.',
+  'darshan.darshanHeading': 'Darshan timings',
+  'darshan.aartiHeading': 'Aarti timings',
+  'darshan.specialHeading': 'Special day & festival timings',
+  'darshan.guidelinesHeading': 'Visitor guidelines',
+  'darshan.viewFull': 'View full timings',
+  'darshan.occasion': 'Occasion',
+  'darshan.timing': 'Timing',
+  'darshan.note': 'Note',
+  'darshan.sampleNotice':
+    'The timings shown are sample values for the website. Please confirm with the temple office before planning your visit.',
+
+  // ---------------------------------------------------------------- events
+  'events.title': 'Upcoming Events',
+  'events.subtitle': 'Festivals, pujas and gatherings in the temple calendar.',
+  'events.carouselLabel': 'Upcoming events carousel',
+  'events.slideLabel': 'Event {current} of {total}',
+  'events.previousSlide': 'Previous event',
+  'events.nextSlide': 'Next event',
+  'events.goToSlide': 'Go to event {index}',
+  'events.pauseAutoplay': 'Pause automatic slide change',
+  'events.playAutoplay': 'Resume automatic slide change',
+  'events.upcoming': 'Upcoming events',
+  'events.past': 'Past events',
+  'events.none': 'No events in this category at the moment.',
+  'events.allEvents': 'View all events',
+  'events.pageTitle': 'Events & Festivals',
+  'events.pageIntro':
+    'The temple calendar follows the lunar month. Below are the gatherings planned for the coming season, along with a record of recent ones.',
+  'events.aboutEvent': 'About this event',
+  'events.details': 'Event details',
+  'events.backToEvents': 'All events',
+  'events.related': 'Other events',
+  'events.status.upcoming': 'Upcoming',
+  'events.status.ongoing': 'Happening now',
+  'events.status.past': 'Concluded',
+  'events.category.mahashivratri': 'Mahashivratri',
+  'events.category.sawan': 'Sawan',
+  'events.category.puja': 'Puja',
+  'events.category.festival': 'Festival',
+  'events.category.cultural': 'Cultural',
+  'events.category.other': 'Other',
+
+  // ---------------------------------------------------------------- katha
+  'katha.title': 'Mahadev Katha',
+  'katha.subtitle':
+    'Stories of Shiva drawn from the Puranas — retold simply, with their source noted.',
+  'katha.pageIntro':
+    'A growing collection of stories, teachings and festival lore connected with Mahadev. Each article names the scripture it draws upon.',
+  'katha.featured': 'Featured story',
+  'katha.latest': 'Latest stories',
+  'katha.popular': 'Popular stories',
+  'katha.all': 'All stories',
+  'katha.searchLabel': 'Search stories',
+  'katha.searchPlaceholder': 'Search by title or keyword…',
+  'katha.categoriesLabel': 'Filter stories by category',
+  'katha.resultsCount': '{count} stories',
+  'katha.resultsCountOne': '1 story',
+  'katha.noResults': 'No stories matched your search. Try a different word or category.',
+  'katha.readStory': 'Read story',
+  'katha.related': 'Related stories',
+  'katha.publishedOn': 'Published on',
+  'katha.author': 'Retold by',
+  'katha.source': 'Source',
+  'katha.sourceNote':
+    'Puranic accounts differ between recensions and regional traditions. This retelling follows the source named above and is offered as devotional literature, not as historical record.',
+  'katha.backToKatha': 'All stories',
+  'katha.shareWhatsapp': 'Share on WhatsApp',
+  'katha.shareFacebook': 'Share on Facebook',
+  'katha.copyLink': 'Copy link',
+  'katha.linkCopied': 'Link copied',
+  'katha.category.shiv-katha': 'Shiva Kathas',
+  'katha.category.shiv-puran': 'Shiva Purana',
+  'katha.category.mahadev': 'Mahadev',
+  'katha.category.shiv-parvati': 'Shiva & Parvati',
+  'katha.category.jyotirlinga': 'Jyotirlinga',
+  'katha.category.ganesh': 'Ganesha',
+  'katha.category.kartikeya': 'Kartikeya',
+  'katha.category.sawan-vishesh': 'Sawan Special',
+  'katha.category.mahashivratri-vishesh': 'Mahashivratri Special',
+  'katha.category.adhyatmik-gyan': 'Spiritual Wisdom',
+
+  // ---------------------------------------------------------------- about
+  'about.previewEyebrow': 'About the temple',
+  'about.previewTitle': 'A quiet courtyard, an old shrine, an unbroken practice',
+  'about.previewBody':
+    'Baba Rupneshwar Nath Temple serves its town as a place of daily worship. The sanctum houses a Shivling, and the surrounding courtyard holds shrines to Nandi, Ganesha and the Navagraha. Morning and evening aarti are offered every day of the year.',
+  'about.readMore': 'Read about the temple',
+  'about.pageTitle': 'About the Temple',
+  'about.introHeading': 'Introduction',
+  'about.historyHeading': 'History',
+  'about.significanceHeading': 'Religious significance',
+  'about.traditionsHeading': 'Temple traditions',
+  'about.devoteesHeading': 'What the temple means to devotees',
+  'about.trustHeading': 'Temple management & trust',
+  'about.photosHeading': 'Temple photographs',
+
+  // ---------------------------------------------------------------- history
+  'history.pageTitle': 'History & Significance',
+  'history.pageIntro':
+    'What follows separates what is documented from what is held in local memory. Where verified records are not yet available, the section is marked as placeholder text.',
+  'history.originHeading': 'History of Baba Rupneshwar Nath',
+  'history.significanceHeading': 'Religious significance',
+  'history.localHeading': 'Local importance',
+  'history.traditionsHeading': 'Temple traditions',
+  'history.beliefsHeading': 'Beliefs held by devotees',
+  'history.onThisPage': 'On this page',
+
+  // ---------------------------------------------------------------- gallery
+  'gallery.title': 'Gallery',
+  'gallery.subtitle': 'Moments from the temple — its architecture, its rituals, its festivals.',
+  'gallery.previewTitle': 'From the Temple Gallery',
+  'gallery.viewFull': 'View full gallery',
+  'gallery.filterLabel': 'Filter photographs by category',
+  'gallery.imageCount': '{count} photographs',
+  'gallery.openImage': 'Open larger view of {name}',
+  'gallery.lightboxLabel': 'Photograph viewer',
+  'gallery.imageOf': 'Photograph {current} of {total}',
+  'gallery.placeholderNotice':
+    'Placeholder images are shown until the temple photograph archive is published.',
+  'gallery.category.temple': 'Temple',
+  'gallery.category.shivling': 'Shivling',
+  'gallery.category.aarti': 'Aarti',
+  'gallery.category.festivals': 'Festivals',
+  'gallery.category.puja': 'Puja',
+  'gallery.category.events': 'Events',
+
+  // ---------------------------------------------------------------- reach / contact
+  'reach.title': 'How to Reach',
+  'reach.subtitle': 'The temple is open to all visitors. Here is how to find us.',
+  'reach.address': 'Address',
+  'reach.landmark': 'Nearby landmark',
+  'reach.directions': 'Get directions',
+  'reach.mapPlaceholder': 'Map',
+  'reach.mapNotice':
+    'An interactive Google Map will be embedded here once the temple’s exact coordinates are confirmed.',
+  'reach.byRoad': 'By road',
+  'reach.byRail': 'By rail',
+  'reach.byAir': 'By air',
+
+  'contact.pageTitle': 'Contact & Location',
+  'contact.pageIntro':
+    'For queries about darshan, events or seva, please write to us or visit the temple office.',
+  'contact.detailsHeading': 'Contact details',
+  'contact.phone': 'Phone',
+  'contact.email': 'Email',
+  'contact.officeHours': 'Office hours',
+  'contact.visitingHeading': 'Visiting information',
+  'contact.formHeading': 'Send us a message',
+  'contact.formIntro': 'Fill in the form and the temple office will get back to you.',
+  'contact.form.name': 'Full name',
+  'contact.form.mobile': 'Mobile number',
+  'contact.form.email': 'Email address',
+  'contact.form.message': 'Message',
+  'contact.form.submit': 'Send message',
+  'contact.form.required': 'Required',
+  'contact.form.optional': 'Optional',
+  'contact.form.namePlaceholder': 'Your name',
+  'contact.form.mobilePlaceholder': '10-digit mobile number',
+  'contact.form.emailPlaceholder': 'you@example.com',
+  'contact.form.messagePlaceholder': 'How can we help?',
+  'contact.form.errorName': 'Please enter your name (at least 2 characters).',
+  'contact.form.errorMobile': 'Please enter a valid 10-digit Indian mobile number.',
+  'contact.form.errorEmail': 'Please enter a valid email address.',
+  'contact.form.errorMessage': 'Please enter a message of at least 10 characters.',
+  'contact.form.errorSummary': 'Please correct the following before sending:',
+  'contact.form.success':
+    'Thank you. Your message has been received and the temple office will respond shortly.',
+  'contact.form.successNote':
+    'Note: in this first release the form is validated in the browser only and is not yet delivered by email.',
+  'contact.form.sendAnother': 'Send another message',
+
+  // ---------------------------------------------------------------- footer
+  'footer.about':
+    'Baba Rupneshwar Nath Temple — a place of daily darshan, aarti and Shiva worship, open to every visitor.',
+  'footer.explore': 'Explore',
+  'footer.visit': 'Visit',
+  'footer.connect': 'Connect',
+  'footer.follow': 'Follow the temple',
+  'footer.socialPlaceholder': 'Social media accounts will be linked here.',
+  'footer.rights': 'All rights reserved.',
+  'footer.privacy': 'Privacy Policy',
+  'footer.terms': 'Terms of Use',
+  'footer.builtNote': 'Information on this website is maintained by the temple committee.',
+
+  // ---------------------------------------------------------------- misc pages
+  'notFound.title': 'Page not found',
+  'notFound.body': 'The page you were looking for is not here. It may have been moved or renamed.',
+  'privacy.title': 'Privacy Policy',
+  'terms.title': 'Terms of Use',
+} as const;
+
+export type TranslationKey = keyof typeof en;
