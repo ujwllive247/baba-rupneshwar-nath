@@ -12,7 +12,6 @@ export const hi: Record<TranslationKey, string> = {
   'nav.home': 'होम',
   'nav.about': 'परिचय',
   'nav.history': 'इतिहास',
-  'nav.darshan': 'दर्शन-आरती',
   'nav.events': 'आयोजन',
   'nav.katha': 'कथा',
   'nav.gallery': 'गैलरी',
@@ -20,6 +19,11 @@ export const hi: Record<TranslationKey, string> = {
   'nav.openMenu': 'मुख्य मेन्यू खोलें',
   'nav.closeMenu': 'मुख्य मेन्यू बंद करें',
   'nav.menu': 'मेन्यू',
+  'nav.temple': 'मंदिर',
+  'nav.aboutTemple': 'मंदिर परिचय',
+  'nav.mahadevKatha': 'महादेव कथा',
+  'nav.visit': 'पधारें',
+  'nav.planVisit': 'अपनी यात्रा की योजना बनाएँ',
 
   // ---------------------------------------------------------------- common
   'common.skipToContent': 'मुख्य सामग्री पर जाएँ',
@@ -60,21 +64,6 @@ export const hi: Record<TranslationKey, string> = {
   // ---------------------------------------------------------------- announcement
   'announcement.eyebrow': 'मंदिर सूचना',
   'announcement.label': 'महत्वपूर्ण सूचना',
-
-  // ---------------------------------------------------------------- darshan
-  'darshan.title': 'दर्शन एवं आरती समय',
-  'darshan.subtitle':
-    'मंदिर में प्रतिदिन दर्शन एवं आरती का समय। पर्व-त्योहार के दिनों में समय बदल सकता है।',
-  'darshan.darshanHeading': 'दर्शन समय',
-  'darshan.aartiHeading': 'आरती समय',
-  'darshan.specialHeading': 'विशेष दिवस एवं पर्व समय',
-  'darshan.guidelinesHeading': 'दर्शनार्थियों के लिए दिशा-निर्देश',
-  'darshan.viewFull': 'पूरा समय-सारणी देखें',
-  'darshan.occasion': 'अवसर',
-  'darshan.timing': 'समय',
-  'darshan.note': 'टिप्पणी',
-  'darshan.sampleNotice':
-    'यहाँ दिया गया समय वेबसाइट हेतु नमूना है। यात्रा से पूर्व कृपया मंदिर कार्यालय से पुष्टि कर लें।',
 
   // ---------------------------------------------------------------- events
   'events.title': 'आगामी आयोजन',
@@ -269,15 +258,23 @@ export const hi: Record<TranslationKey, string> = {
   // ---------------------------------------------------------------- footer
   'footer.about':
     'बाबा रुपनेश्वर नाथ मंदिर — नित्य दर्शन, आरती एवं शिव आराधना का स्थल, प्रत्येक दर्शनार्थी के लिए खुला।',
-  'footer.explore': 'पृष्ठ',
-  'footer.visit': 'दर्शन',
-  'footer.connect': 'संपर्क',
   'footer.follow': 'मंदिर से जुड़ें',
   'footer.socialPlaceholder': 'सोशल मीडिया लिंक यहाँ जोड़े जाएँगे।',
   'footer.rights': 'सर्वाधिकार सुरक्षित।',
   'footer.privacy': 'गोपनीयता नीति',
   'footer.terms': 'उपयोग की शर्तें',
   'footer.builtNote': 'इस वेबसाइट की जानकारी मंदिर समिति द्वारा संधारित है।',
+  'footer.quickLinks': 'त्वरित लिंक',
+  'footer.templeInfo': 'मंदिर जानकारी',
+  'footer.events': 'आयोजन',
+  'footer.noEvents': 'नए आयोजनों की सूचना यहाँ दी जाएगी।',
+  'footer.allEvents': 'सभी आयोजन',
+  'footer.visitUs': 'पधारें',
+  'footer.directions': 'मार्ग एवं मानचित्र',
+  'footer.contact': 'संपर्क',
+  'footer.contactPage': 'संपर्क पृष्ठ',
+  'footer.legal': 'नीतियाँ',
+  'footer.opensNewTab': 'नए टैब में खुलता है',
 
   // ---------------------------------------------------------------- misc pages
   'notFound.title': 'पृष्ठ नहीं मिला',

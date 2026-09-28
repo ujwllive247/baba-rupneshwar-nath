@@ -3,14 +3,14 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { cn } from '@/utils/cn';
 
 interface PlaceholderNoticeProps {
-  /** Overrides the default "unverified content" copy, e.g. for sample timings or images. */
+  /** Overrides the default "unverified content" copy, e.g. for sample images. */
   message?: string;
   className?: string;
 }
 
 /**
  * Visible marker for content that is a placeholder or sample rather than
- * verified fact. Used on history/about sections, sample timings and gallery.
+ * verified fact. Used on history/about sections, legal pages and gallery.
  */
 export function PlaceholderNotice({ message, className }: PlaceholderNoticeProps) {
   const { t } = useLanguage();

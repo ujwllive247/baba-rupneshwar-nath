@@ -13,7 +13,6 @@ export const en = {
   'nav.home': 'Home',
   'nav.about': 'About',
   'nav.history': 'History',
-  'nav.darshan': 'Darshan-Aarti',
   'nav.events': 'Events',
   'nav.katha': 'Katha',
   'nav.gallery': 'Gallery',
@@ -21,6 +20,11 @@ export const en = {
   'nav.openMenu': 'Open main menu',
   'nav.closeMenu': 'Close main menu',
   'nav.menu': 'Menu',
+  'nav.temple': 'Temple',
+  'nav.aboutTemple': 'About Temple',
+  'nav.mahadevKatha': 'Mahadev Katha',
+  'nav.visit': 'Visit Us',
+  'nav.planVisit': 'Plan your visit',
 
   // ---------------------------------------------------------------- common
   'common.skipToContent': 'Skip to main content',
@@ -61,21 +65,6 @@ export const en = {
   // ---------------------------------------------------------------- announcement
   'announcement.eyebrow': 'Temple announcement',
   'announcement.label': 'Important announcement',
-
-  // ---------------------------------------------------------------- darshan
-  'darshan.title': 'Darshan & Aarti Timings',
-  'darshan.subtitle':
-    'Daily timings for darshan and aarti at the temple. Timings may change on festival days.',
-  'darshan.darshanHeading': 'Darshan timings',
-  'darshan.aartiHeading': 'Aarti timings',
-  'darshan.specialHeading': 'Special day & festival timings',
-  'darshan.guidelinesHeading': 'Visitor guidelines',
-  'darshan.viewFull': 'View full timings',
-  'darshan.occasion': 'Occasion',
-  'darshan.timing': 'Timing',
-  'darshan.note': 'Note',
-  'darshan.sampleNotice':
-    'The timings shown are sample values for the website. Please confirm with the temple office before planning your visit.',
 
   // ---------------------------------------------------------------- events
   'events.title': 'Upcoming Events',
@@ -271,15 +260,23 @@ export const en = {
   // ---------------------------------------------------------------- footer
   'footer.about':
     'Baba Rupneshwar Nath Temple — a place of daily darshan, aarti and Shiva worship, open to every visitor.',
-  'footer.explore': 'Explore',
-  'footer.visit': 'Visit',
-  'footer.connect': 'Connect',
   'footer.follow': 'Follow the temple',
   'footer.socialPlaceholder': 'Social media accounts will be linked here.',
   'footer.rights': 'All rights reserved.',
   'footer.privacy': 'Privacy Policy',
   'footer.terms': 'Terms of Use',
   'footer.builtNote': 'Information on this website is maintained by the temple committee.',
+  'footer.quickLinks': 'Quick links',
+  'footer.templeInfo': 'Temple information',
+  'footer.events': 'Events',
+  'footer.noEvents': 'New events will be announced here.',
+  'footer.allEvents': 'All events',
+  'footer.visitUs': 'Visit Us',
+  'footer.directions': 'Directions & map',
+  'footer.contact': 'Contact',
+  'footer.contactPage': 'Contact page',
+  'footer.legal': 'Legal',
+  'footer.opensNewTab': 'opens in a new tab',
 
   // ---------------------------------------------------------------- misc pages
   'notFound.title': 'Page not found',

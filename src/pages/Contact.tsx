@@ -2,6 +2,7 @@ import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import { PATHS } from '@/routes/paths';
+import { VISIT_SECTION_ID } from '@/data/navigation';
 import { templeInfo, directions, visitingNotes } from '@/data/temple';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { PageHero } from '@/components/PageHero';
@@ -77,7 +78,7 @@ export default function Contact() {
             </ul>
           </section>
 
-          <section>
+          <section id={VISIT_SECTION_ID} className="scroll-mt-24 focus:outline-none">
             <h2 className="text-xl font-semibold text-ink-900">{t('reach.title')}</h2>
             <div className="mt-4 divide-y divide-sand-200 rounded-2xl border border-sand-200 bg-white shadow-soft">
               {directions.map((item) => (

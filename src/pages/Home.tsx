@@ -5,17 +5,16 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import { PATHS, SITE_URL } from '@/routes/paths';
 import { announcements } from '@/data/announcements';
-import { darshanTimings, aartiTimings } from '@/data/timings';
 import { upcomingEvents } from '@/data/events';
 import { featuredStory, latestStories } from '@/data/stories';
 import { galleryImages } from '@/data/gallery';
 import { AnnouncementStrip } from '@/components/AnnouncementStrip';
-import { TimingCard } from '@/components/TimingCard';
 import { EventCarousel } from '@/components/EventCarousel';
 import { StoryCard } from '@/components/StoryCard';
 import { SectionHeading } from '@/components/SectionHeading';
 import { MapSection } from '@/components/MapSection';
 import { templeInfo, directions } from '@/data/temple';
+import { VISIT_LINK } from '@/data/navigation';
 
 export default function Home() {
   const { t, pick } = useLanguage();
@@ -86,18 +85,20 @@ export default function Home() {
           <div aria-hidden="true" className="h-px w-20 bg-gold-400/50" />
 
           {/* Temple name / page H1 */}
-          <h1 className="max-w-3xl text-4xl font-semibold leading-tight drop-shadow-lg sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-sand-50 drop-shadow-lg sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
             {t('hero.welcome')}
           </h1>
 
           {/* Tagline */}
-          <p className="max-w-xl text-base leading-relaxed text-sand-200 drop-shadow sm:text-lg">
+          {/* text-shadow instead of the drop-shadow filter: a filter rasterises the
+              text into its own layer, which renders small body copy soft/blurry. */}
+          <p className="max-w-xl text-base leading-relaxed text-sand-100 [text-shadow:0_1px_3px_theme(colors.night.950/80%)] sm:text-lg">
             {t('hero.intro')}
           </p>
 
           {/* Primary CTAs */}
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <NavLink to={PATHS.darshan} className="btn-primary">
+            <NavLink to={VISIT_LINK} className="btn-primary">
               {t('hero.ctaPrimary')}
             </NavLink>
             <NavLink
@@ -121,45 +122,6 @@ export default function Home() {
       {/* --------------------------------------------------------- Announcement
           UI-002 — slim strip; conditional on data; priority-coded background. */}
       {topAnnouncement && <AnnouncementStrip announcement={topAnnouncement} />}
-
-      {/* ------------------------------------------------------------- Darshan
-          UI-003 — eyebrow/title duplication bug fixed; cards grouped by kind;
-          2-col per group gives each card adequate breathing room. */}
-      <section className="container-page py-16 sm:py-20">
-        {/* No eyebrow here: the previous eyebrow t('nav.darshan') = "Darshan-Aarti"
-            duplicated the title t('darshan.title') = "Darshan & Aarti Timings". */}
-        <SectionHeading title={t('darshan.title')} subtitle={t('darshan.subtitle')} />
-
-        <div className="mt-10 space-y-8">
-          {/* Darshan timings group */}
-          <div>
-            <p className="eyebrow mb-4">{t('darshan.darshanHeading')}</p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <TimingCard timing={darshanTimings[0]} icon="Sunrise" />
-              <TimingCard timing={darshanTimings[1]} icon="Sunset" />
-            </div>
-          </div>
-
-          {/* Aarti timings group */}
-          <div>
-            <p className="eyebrow mb-4">{t('darshan.aartiHeading')}</p>
-            <div className="grid gap-4 sm:grid-cols-2">
-              <TimingCard timing={aartiTimings[0]} icon="Sun" />
-              <TimingCard timing={aartiTimings[1]} icon="Moon" />
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8">
-          <NavLink
-            to={PATHS.darshan}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-700 hover:text-saffron-800"
-          >
-            {t('darshan.viewFull')}
-            <ArrowRight aria-hidden="true" size={16} />
-          </NavLink>
-        </div>
-      </section>
 
       {/* --------------------------------------------------------------- Events
           UI-004 — horizontal scroll-snap carousel; unchanged from Phase 0. */}
@@ -227,7 +189,7 @@ export default function Home() {
           </div>
           <div className="order-1 lg:order-2">
             <p className="eyebrow text-saffron-400">{t('about.previewEyebrow')}</p>
-            <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{t('about.previewTitle')}</h2>
+            <h2 className="mt-2 text-2xl font-semibold text-sand-50 sm:text-3xl">{t('about.previewTitle')}</h2>
             <p className="mt-4 max-w-xl leading-relaxed text-sand-300">{t('about.previewBody')}</p>
             <NavLink to={PATHS.about} className="btn-primary mt-6">
               {t('about.readMore')}

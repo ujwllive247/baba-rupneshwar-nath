@@ -155,24 +155,6 @@ export interface GalleryImage {
   height: number;
 }
 
-export type TimingKind = 'darshan' | 'aarti';
-
-export interface Timing {
-  id: string;
-  kind: TimingKind;
-  label: Bilingual;
-  /** Display-ready time range or single time. */
-  time: Bilingual;
-  note?: Bilingual;
-}
-
-export interface SpecialTiming {
-  id: string;
-  occasion: Bilingual;
-  timing: Bilingual;
-  note?: Bilingual;
-}
-
 export interface Announcement {
   id: string;
   titleHindi: string;

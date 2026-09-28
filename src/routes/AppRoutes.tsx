@@ -3,7 +3,6 @@ import { Layout } from '@/components/Layout';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 import History from '@/pages/History';
-import DarshanAarti from '@/pages/DarshanAarti';
 import Events from '@/pages/Events';
 import EventDetails from '@/pages/EventDetails';
 import MahadevKatha from '@/pages/MahadevKatha';
@@ -23,7 +22,6 @@ export function AppRoutes() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="history" element={<History />} />
-        <Route path="darshan-aarti" element={<DarshanAarti />} />
         <Route path="events" element={<Events />} />
         <Route path="events/:slug" element={<EventDetails />} />
         <Route path="mahadev-katha" element={<MahadevKatha />} />

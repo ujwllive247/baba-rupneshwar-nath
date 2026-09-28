@@ -24,7 +24,6 @@ export const announcements: Announcement[] = [
     bodyEnglish:
       'For the duration of the katha, the evening aarti will be at 7:30 PM instead of 7:00 PM. Darshan hours remain unchanged.',
     date: '2026-09-10',
-    link: PATHS.darshan,
     priority: 'normal',
   },
 ];

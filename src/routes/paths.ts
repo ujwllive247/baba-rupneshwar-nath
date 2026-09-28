@@ -3,7 +3,6 @@ export const PATHS = {
   home: '/',
   about: '/about',
   history: '/history',
-  darshan: '/darshan-aarti',
   events: '/events',
   eventDetail: (slug: string) => `/events/${slug}`,
   katha: '/mahadev-katha',

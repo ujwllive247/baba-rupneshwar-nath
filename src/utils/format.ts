@@ -50,11 +50,6 @@ export function formatTime(hhmm: string, lang: Language): string {
   }).format(date);
 }
 
-export function formatTimeRange(start: string, end: string, lang: Language): string {
-  if (!end || start === end) return formatTime(start, lang);
-  return `${formatTime(start, lang)} – ${formatTime(end, lang)}`;
-}
-
 /** Machine-readable datetime for <time datetime="…"> attributes. */
 export function toDateTimeAttr(iso: string, time?: string): string {
   return time ? `${iso}T${time}` : iso;

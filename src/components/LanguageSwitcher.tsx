@@ -4,10 +4,12 @@ import { cn } from '@/utils/cn';
 
 interface LanguageSwitcherProps {
   className?: string;
+  /** `touch` gives each option a 44px target for the mobile menu. */
+  size?: 'default' | 'touch';
 }
 
 /** हिन्दी | English — a two-way toggle that also persists the choice. */
-export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
+export function LanguageSwitcher({ className, size = 'default' }: LanguageSwitcherProps) {
   const { lang, setLanguage, t } = useLanguage();
 
   return (
@@ -30,6 +32,7 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
             onClick={() => setLanguage(option.code)}
             className={cn(
               'rounded-full px-3 py-1.5 font-medium transition',
+              size === 'touch' && 'inline-flex min-h-11 min-w-[5.5rem] items-center justify-center px-4',
               active
                 ? 'bg-saffron-600 text-white shadow-sm'
                 : 'text-ink-600 hover:bg-sand-100 hover:text-ink-900'
