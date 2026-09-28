@@ -88,6 +88,54 @@ export interface Story {
   popular?: boolean;
 }
 
+/** One line of spoken dialogue attributed to a character within a comic scene. */
+export interface ComicDialogueLine {
+  speaker: Bilingual;
+  line: Bilingual;
+}
+
+/** One panel of an immersive, scroll-based Katha comic experience. */
+export interface ComicSceneData {
+  id: string;
+  sceneNumber: number;
+  heading: Bilingual;
+  narration: Bilingual;
+  dialogue?: ComicDialogueLine[];
+  /** A short, italicised visual/sensory detail rendered beneath the narration. */
+  detail?: Bilingual;
+  image: string;
+  imageAlt: Bilingual;
+}
+
+/**
+ * An immersive comic-style Katha chapter. Distinct from `Story` (the plain
+ * article format): a chapter is scene-by-scene, scroll-driven, and always
+ * names which parts are scripture-based versus creative narration.
+ */
+export interface KathaChapter {
+  id: string;
+  slug: string;
+  titleHindi: string;
+  titleEnglish: string;
+  /** Short cinematic hook shown before Scene 1, meant to create curiosity fast. */
+  hook: Bilingual;
+  introduction: Bilingual;
+  coverImage: string;
+  coverImageAlt: Bilingual;
+  /** Scriptural source(s), same convention as `Story.source`. */
+  source: Bilingual;
+  /** Names which elements are scripture-based vs. original creative narration. */
+  scriptureNote: Bilingual;
+  creativeNote: Bilingual;
+  /** Note on variant tellings across recensions/regional traditions, where relevant. */
+  versionsNote?: Bilingual;
+  scenes: ComicSceneData[];
+  /** 2–4 concise spiritual takeaways shown at the end of the chapter. */
+  takeaways: Bilingual[];
+  /** Slug of the matching plain-article Story, if one exists, for cross-linking. */
+  relatedStorySlug?: string;
+}
+
 export type GalleryCategory =
   | 'temple'
   | 'shivling'

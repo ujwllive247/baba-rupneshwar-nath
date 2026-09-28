@@ -42,9 +42,11 @@ export function StoryCard({ story, className, featured = false }: StoryCardProps
               featured ? 'text-2xl' : 'text-lg'
             )}
           >
-            {story.titleHindi}
+            {title}
           </h3>
-          <p className="text-sm text-ink-500">{story.titleEnglish}</p>
+          {lang === 'hi' && (
+            <p className="text-sm text-ink-500">{story.titleEnglish}</p>
+          )}
           <p className={cn('text-ink-600', featured ? 'text-base' : 'line-clamp-2 text-sm')}>
             {excerpt}
           </p>

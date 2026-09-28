@@ -17,14 +17,24 @@ export function TimingCard({ timing, icon, className }: TimingCardProps) {
   const Icon = ICONS[icon];
 
   return (
-    <div className={cn('card flex items-start gap-4 p-5', className)}>
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-saffron-50 text-saffron-700">
-        <Icon aria-hidden="true" size={22} />
-      </span>
-      <div>
-        <h3 className="font-semibold text-ink-900">{pick(timing.label)}</h3>
-        <p className="mt-1 text-xl font-display text-saffron-700">{pick(timing.time)}</p>
-        {timing.note && <p className="mt-1.5 text-sm text-ink-500">{pick(timing.note)}</p>}
+    <div className={cn('card p-5', className)}>
+      <div className="flex items-start gap-4">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-saffron-50 text-saffron-700">
+          <Icon aria-hidden="true" size={22} />
+        </span>
+        <div className="min-w-0 flex-1">
+          {/* Label demoted to descriptor so the time numeral reads as the primary content */}
+          <h3 className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-500">
+            {pick(timing.label)}
+          </h3>
+          {/* Time numeral — largest element in the card */}
+          <p className="mt-1 font-display text-2xl font-semibold leading-none text-saffron-700">
+            {pick(timing.time)}
+          </p>
+          {timing.note && (
+            <p className="mt-2.5 text-sm leading-relaxed text-ink-500">{pick(timing.note)}</p>
+          )}
+        </div>
       </div>
     </div>
   );

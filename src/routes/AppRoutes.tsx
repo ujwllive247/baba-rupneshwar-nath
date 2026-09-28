@@ -8,6 +8,8 @@ import Events from '@/pages/Events';
 import EventDetails from '@/pages/EventDetails';
 import MahadevKatha from '@/pages/MahadevKatha';
 import StoryDetails from '@/pages/StoryDetails';
+import KathaAnubhav from '@/pages/KathaAnubhav';
+import KathaAnubhavChapter from '@/pages/KathaAnubhavChapter';
 import Gallery from '@/pages/Gallery';
 import Contact from '@/pages/Contact';
 import Privacy from '@/pages/Privacy';
@@ -25,6 +27,8 @@ export function AppRoutes() {
         <Route path="events" element={<Events />} />
         <Route path="events/:slug" element={<EventDetails />} />
         <Route path="mahadev-katha" element={<MahadevKatha />} />
+        <Route path="mahadev-katha/anubhav" element={<KathaAnubhav />} />
+        <Route path="mahadev-katha/anubhav/:slug" element={<KathaAnubhavChapter />} />
         <Route path="mahadev-katha/:slug" element={<StoryDetails />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="contact" element={<Contact />} />

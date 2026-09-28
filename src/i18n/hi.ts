@@ -145,6 +145,37 @@ export const hi: Record<TranslationKey, string> = {
   'katha.category.mahashivratri-vishesh': 'महाशिवरात्रि विशेष',
   'katha.category.adhyatmik-gyan': 'आध्यात्मिक ज्ञान',
 
+  // ---------------------------------------------------------------- katha anubhav (immersive comic experience)
+  'kathaAnubhav.badge': 'नया अनुभव',
+  'kathaAnubhav.promoTitle': 'कथा पढ़ें नहीं — कथा के भीतर प्रवेश करें',
+  'kathaAnubhav.promoBody':
+    'समुद्र मंथन और नीलकंठ महादेव की कथा — दृश्य दर दृश्य, संवाद एवं वातावरण के साथ, केवल एक लेख के रूप में नहीं।',
+  'kathaAnubhav.promoCta': 'अनुभव में प्रवेश करें',
+  'kathaAnubhav.viewComicCta': 'इसे इमर्सिव अनुभव में देखें',
+  'kathaAnubhav.readArticleInstead': 'इसे लेख रूप में पढ़ें',
+  'kathaAnubhav.libraryTitle': 'कथा अनुभव',
+  'kathaAnubhav.librarySubtitle':
+    'महादेव कथा, दृश्य दर दृश्य — कॉमिक पैनल, संवाद एवं वातावरण के साथ, केवल लेख के रूप में नहीं।',
+  'kathaAnubhav.comingSoonTitle': 'अगली कथा शीघ्र आ रही है',
+  'kathaAnubhav.comingSoonBody': 'अधिक इमर्सिव कथा अनुभव लिखे जा रहे हैं।',
+  'kathaAnubhav.enterChapter': 'कथा आरंभ करें',
+  'kathaAnubhav.startReading': 'कथा शुरू करें',
+  'kathaAnubhav.sceneLabel': 'दृश्य {current} / {total}',
+  'kathaAnubhav.sceneProgress': 'कथा {current} / {total}',
+  'kathaAnubhav.jumpToScene': 'दृश्य {index} पर जाएँ',
+  'kathaAnubhav.continueKatha': 'आगे बढ़ें',
+  'kathaAnubhav.previousScene': 'पिछला',
+  'kathaAnubhav.audioLabel': 'कथा सुनें',
+  'kathaAnubhav.audioComingSoon': 'यह सुविधा शीघ्र उपलब्ध होगी',
+  'kathaAnubhav.sourceScriptureLabel': 'शास्त्र-आधारित अंश',
+  'kathaAnubhav.sourceCreativeLabel': 'रचनात्मक पुनर्कथन',
+  'kathaAnubhav.endTitle': 'हर-हर महादेव',
+  'kathaAnubhav.takeawaysHeading': 'इस कथा से सीख',
+  'kathaAnubhav.nextChapterHeading': 'अगली कथा',
+  'kathaAnubhav.nextChapterBody':
+    'अगली कथा अभी लिखी जा रही है। तब तक, इस कथा को किसी अपने के साथ साझा करें।',
+  'kathaAnubhav.backToLibrary': 'सभी कथा अनुभव',
+
   // ---------------------------------------------------------------- about
   'about.previewEyebrow': 'मंदिर परिचय',
   'about.previewTitle': 'एक शांत प्रांगण, एक प्राचीन शिवालय, एक अखंड परंपरा',

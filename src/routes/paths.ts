@@ -8,6 +8,8 @@ export const PATHS = {
   eventDetail: (slug: string) => `/events/${slug}`,
   katha: '/mahadev-katha',
   storyDetail: (slug: string) => `/mahadev-katha/${slug}`,
+  kathaAnubhav: '/mahadev-katha/anubhav',
+  kathaAnubhavDetail: (slug: string) => `/mahadev-katha/anubhav/${slug}`,
   gallery: '/gallery',
   contact: '/contact',
   privacy: '/privacy',

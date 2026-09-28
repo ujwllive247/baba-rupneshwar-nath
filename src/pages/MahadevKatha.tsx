@@ -1,10 +1,12 @@
 import { useId, useMemo, useState } from 'react';
-import { Search, X } from 'lucide-react';
+import { NavLink } from 'react-router-dom';
+import { Search, Sparkles, X } from 'lucide-react';
 import type { StoryCategory } from '@/types';
 import { useLanguage } from '@/hooks/useLanguage';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import { PATHS } from '@/routes/paths';
 import { stories, featuredStory, popularStories } from '@/data/stories';
+import { kathaChapters } from '@/data/kathaChapters';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { PageHero } from '@/components/PageHero';
 import { SectionHeading } from '@/components/SectionHeading';
@@ -65,6 +67,24 @@ export default function MahadevKatha() {
       <Breadcrumb items={[{ label: t('nav.katha') }]} />
 
       <div className="container-page space-y-14 pb-20">
+        {!isFiltering && kathaChapters.length > 0 && (
+          <section className="flex flex-col items-start gap-5 rounded-3xl bg-night-900 px-6 py-8 text-sand-100 sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-10">
+            <div>
+              <span className="eyebrow inline-flex items-center gap-1.5 text-saffron-400">
+                <Sparkles aria-hidden="true" size={14} />
+                {t('kathaAnubhav.badge')}
+              </span>
+              <h2 className="mt-2 max-w-xl font-devanagari text-2xl font-semibold text-sand-50 sm:text-3xl">
+                {t('kathaAnubhav.promoTitle')}
+              </h2>
+              <p className="mt-2 max-w-xl text-sand-300">{t('kathaAnubhav.promoBody')}</p>
+            </div>
+            <NavLink to={PATHS.kathaAnubhavDetail(kathaChapters[0].slug)} className="btn-primary shrink-0">
+              {t('kathaAnubhav.promoCta')}
+            </NavLink>
+          </section>
+        )}
+
         {!isFiltering && featuredStory && (
           <section>
             <SectionHeading title={t('katha.featured')} />

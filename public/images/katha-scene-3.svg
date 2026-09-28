@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Mahadev and Parvati in meditation on Mount Kailash as devas arrive with hands folded, Madhubani style">
+  <defs>
+    <pattern id="hatch-katha-scene-3" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#274472" stroke-width="1.1" opacity="0.28"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="#F3E9D6"/>
+  <rect width="1200" height="800" fill="url(#hatch-katha-scene-3)"/>
+
+  <g transform="translate(600 400)">
+
+    <!-- Kailash -->
+    <path d="M -260 220 L -60 -180 L 140 220 Z" fill="#EFEAE0" stroke="#241A0F" stroke-width="4"/>
+    <path d="M -60 -180 L 20 -60 L -140 -60 Z" fill="#C9D6E8" opacity="0.7"/>
+    <!-- Shiva seated, meditating -->
+    <g transform="translate(-40 120)">
+      <path d="M -46 90 C -46 40 -20 20 0 20 C 20 20 46 40 46 90 Z" fill="#F3E7C9" stroke="#241A0F" stroke-width="3"/>
+      <circle cx="0" cy="-10" r="28" fill="#F3E7C9" stroke="#241A0F" stroke-width="3"/>
+      <path d="M -22 -30 C -14 -54 14 -54 22 -30 C 10 -40 -10 -40 -22 -30 Z" fill="#241A0F"/>
+      <path d="M 6 -50 C 16 -62 30 -60 30 -46" fill="none" stroke="#274472" stroke-width="4"/>
+      <ellipse cx="30" cy="-58" rx="8" ry="5" fill="#274472"/>
+      <circle cx="-8" cy="-8" r="2" fill="#241A0F"/>
+      <circle cx="8" cy="-8" r="2" fill="#241A0F"/>
+      <path d="M -8 4 L 8 4" stroke="#241A0F" stroke-width="1.6"/>
+      <!-- trishul -->
+      <g transform="translate(58 -20)">
+        <line x1="0" y1="-70" x2="0" y2="90" stroke="#241A0F" stroke-width="4"/>
+        <path d="M 0 -70 L -14 -50 M 0 -70 L 14 -50 M 0 -70 L 0 -46" stroke="#241A0F" stroke-width="4" fill="none"/>
+      </g>
+    </g>
+    <!-- Parvati seated beside -->
+    <g transform="translate(46 130)">
+      <path d="M -34 80 C -34 36 -14 18 0 18 C 14 18 34 36 34 80 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="3"/>
+      <circle cx="0" cy="-6" r="22" fill="#F3E7C9" stroke="#241A0F" stroke-width="3"/>
+      <path d="M -18 -18 C -10 -30 10 -30 18 -18 C 8 -24 -8 -24 -18 -18 Z" fill="#241A0F"/>
+      <circle cx="-6" cy="-4" r="1.6" fill="#241A0F"/>
+      <circle cx="6" cy="-4" r="1.6" fill="#241A0F"/>
+    </g>
+    <!-- devas approaching, hands folded -->
+    <g fill="#F3E7C9" stroke="#241A0F" stroke-width="2.2">
+      <g transform="translate(200 170)"><circle cx="0" cy="-28" r="12"/><path d="M -13 0 L 13 0 L 8 48 L -8 48 Z"/><path d="M -10 -6 L 0 -18 L 10 -6" fill="none" stroke-width="2"/></g>
+      <g transform="translate(250 180)"><circle cx="0" cy="-28" r="12"/><path d="M -13 0 L 13 0 L 8 48 L -8 48 Z"/><path d="M -10 -6 L 0 -18 L 10 -6" fill="none" stroke-width="2"/></g>
+      <g transform="translate(300 165)"><circle cx="0" cy="-28" r="12"/><path d="M -13 0 L 13 0 L 8 48 L -8 48 Z"/><path d="M -10 -6 L 0 -18 L 10 -6" fill="none" stroke-width="2"/></g>
+    </g>
+
+  </g>
+  <g>
+    <rect x="10.08" y="10.08" width="1179.84" height="779.84" fill="none" stroke="#241A0F" stroke-width="3"/>
+    <rect x="36" y="36" width="1128" height="728" fill="none" stroke="#241A0F" stroke-width="4"/>
+    <rect x="48.6" y="48.6" width="1102.8" height="702.8" fill="none" stroke="#241A0F" stroke-width="1.4"/>
+    <path d="M 72 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 72 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 130 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 130 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 188 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 188 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 246 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 246 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 304 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 304 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 362 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 362 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 420 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 420 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 478 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 478 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 536 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 536 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 594 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 594 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 652 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 652 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 710 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 710 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 768 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 768 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 826 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 826 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 884 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 884 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 942 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 942 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1000 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1000 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1058 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1058 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1116 18 l 29 32.4 l 29 -32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1116 782 l 29 -32.4 l 29 32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1174 18 l 29 32.4 l 29 -32.4 Z" fill="#B23A2E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1174 782 l 29 -32.4 l 29 32.4 Z" fill="#274472" stroke="#241A0F" stroke-width="1.2"/>
+    <path d="M 18 72 l 32.4 29 l -32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 72 l -32.4 29 l 32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 130 l 32.4 29 l -32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 130 l -32.4 29 l 32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 188 l 32.4 29 l -32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 188 l -32.4 29 l 32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 246 l 32.4 29 l -32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 246 l -32.4 29 l 32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 304 l 32.4 29 l -32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 304 l -32.4 29 l 32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 362 l 32.4 29 l -32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 362 l -32.4 29 l 32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 420 l 32.4 29 l -32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 420 l -32.4 29 l 32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 478 l 32.4 29 l -32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 478 l -32.4 29 l 32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 536 l 32.4 29 l -32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 536 l -32.4 29 l 32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 594 l 32.4 29 l -32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 594 l -32.4 29 l 32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 652 l 32.4 29 l -32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 652 l -32.4 29 l 32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 18 710 l 32.4 29 l -32.4 29 Z" fill="#3F6B3A" stroke="#241A0F" stroke-width="1.2"/> <path d="M 1182 710 l -32.4 29 l 32.4 29 Z" fill="#E8871E" stroke="#241A0F" stroke-width="1.2"/>
+  </g>
+</svg>

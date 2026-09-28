@@ -24,8 +24,10 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const menuId = useId();
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const mobileNavRef = useRef<HTMLElement>(null);
 
-  // Close the mobile menu on route change and on Escape; keeps focus predictable.
+  // Close the mobile menu on Escape; keeps focus predictable.
   useEffect(() => {
     if (!open) return;
     function onKeyDown(event: KeyboardEvent) {
@@ -36,6 +38,25 @@ export function Header() {
     }
     document.addEventListener('keydown', onKeyDown);
     return () => document.removeEventListener('keydown', onKeyDown);
+  }, [open]);
+
+  // Close the mobile menu on click outside the header.
+  useEffect(() => {
+    if (!open) return;
+    function onPointerDown(event: PointerEvent) {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener('pointerdown', onPointerDown);
+    return () => document.removeEventListener('pointerdown', onPointerDown);
+  }, [open]);
+
+  // Move focus to the first nav link when the mobile menu opens.
+  useEffect(() => {
+    if (!open) return;
+    const firstLink = mobileNavRef.current?.querySelector<HTMLAnchorElement>('a');
+    firstLink?.focus();
   }, [open]);
 
   useEffect(() => {
@@ -53,7 +74,7 @@ export function Header() {
     );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-sand-200 bg-sand-50/90 backdrop-blur">
+    <header ref={headerRef} className="sticky top-0 z-50 border-b border-sand-200 bg-sand-50/90 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-4 sm:h-20">
         <NavLink
           to={PATHS.home}
@@ -104,7 +125,7 @@ export function Header() {
         hidden={!open}
         className="border-t border-sand-200 bg-sand-50 lg:hidden"
       >
-        <nav aria-label={t('nav.label')} className="container-page py-3">
+        <nav ref={mobileNavRef} aria-label={t('nav.label')} className="container-page py-3">
           <p className="px-1 pb-2 text-xs font-semibold uppercase tracking-wide text-ink-500">
             {t('nav.menu')}
           </p>

@@ -1,8 +1,10 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, NavLink, useParams } from 'react-router-dom';
+import { Sparkles } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import { PATHS, SITE_URL } from '@/routes/paths';
 import { getStoryBySlug, getRelatedStories } from '@/data/stories';
+import { getKathaChapterByStorySlug } from '@/data/kathaChapters';
 import { formatDate } from '@/utils/format';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { StoryBody } from '@/components/StoryBody';
@@ -28,6 +30,7 @@ export default function StoryDetails() {
 
   const related = getRelatedStories(story);
   const shareUrl = `${SITE_URL}${PATHS.storyDetail(story.slug)}`;
+  const comicChapter = getKathaChapterByStorySlug(story.slug);
 
   return (
     <>
@@ -60,6 +63,20 @@ export default function StoryDetails() {
             </div>
           </dl>
         </div>
+
+        {comicChapter && (
+          <div className="mx-auto mt-8 max-w-3xl">
+            <div className="flex flex-col items-start gap-4 rounded-2xl bg-night-900 px-5 py-5 text-sand-100 sm:flex-row sm:items-center sm:justify-between">
+              <p className="inline-flex items-center gap-2 text-sm font-medium text-sand-200">
+                <Sparkles aria-hidden="true" size={16} className="shrink-0 text-saffron-400" />
+                {t('kathaAnubhav.promoTitle')}
+              </p>
+              <NavLink to={PATHS.kathaAnubhavDetail(comicChapter.slug)} className="btn-primary shrink-0">
+                {t('kathaAnubhav.viewComicCta')}
+              </NavLink>
+            </div>
+          </div>
+        )}
 
         <div className="mx-auto mt-8 max-w-4xl overflow-hidden rounded-2xl">
           <img

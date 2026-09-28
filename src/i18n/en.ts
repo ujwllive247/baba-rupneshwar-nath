@@ -147,6 +147,37 @@ export const en = {
   'katha.category.mahashivratri-vishesh': 'Mahashivratri Special',
   'katha.category.adhyatmik-gyan': 'Spiritual Wisdom',
 
+  // ---------------------------------------------------------------- katha anubhav (immersive comic experience)
+  'kathaAnubhav.badge': 'New experience',
+  'kathaAnubhav.promoTitle': 'Don’t just read the katha — step inside it',
+  'kathaAnubhav.promoBody':
+    'An immersive, scene-by-scene comic retelling of the churning of the ocean and Shiva as Neelkanth.',
+  'kathaAnubhav.promoCta': 'Enter the experience',
+  'kathaAnubhav.viewComicCta': 'View as an immersive experience',
+  'kathaAnubhav.readArticleInstead': 'Read as an article instead',
+  'kathaAnubhav.libraryTitle': 'Katha Experiences',
+  'kathaAnubhav.librarySubtitle':
+    'Mahadev Katha, retold scene by scene — comic panels, dialogue and atmosphere, not just an article.',
+  'kathaAnubhav.comingSoonTitle': 'The next chapter is coming soon',
+  'kathaAnubhav.comingSoonBody': 'More immersive Katha experiences are being written.',
+  'kathaAnubhav.enterChapter': 'Begin the katha',
+  'kathaAnubhav.startReading': 'Start the katha',
+  'kathaAnubhav.sceneLabel': 'Scene {current} of {total}',
+  'kathaAnubhav.sceneProgress': 'Chapter {current} of {total}',
+  'kathaAnubhav.jumpToScene': 'Go to scene {index}',
+  'kathaAnubhav.continueKatha': 'Continue Katha',
+  'kathaAnubhav.previousScene': 'Previous',
+  'kathaAnubhav.audioLabel': 'Listen to the katha',
+  'kathaAnubhav.audioComingSoon': 'This feature will be available soon',
+  'kathaAnubhav.sourceScriptureLabel': 'Scripture-based elements',
+  'kathaAnubhav.sourceCreativeLabel': 'Creative retelling',
+  'kathaAnubhav.endTitle': 'Har-Har Mahadev',
+  'kathaAnubhav.takeawaysHeading': 'What this story teaches',
+  'kathaAnubhav.nextChapterHeading': 'Next Katha',
+  'kathaAnubhav.nextChapterBody':
+    'The next chapter is being written. Until then, share this one with someone who needs it.',
+  'kathaAnubhav.backToLibrary': 'All Katha experiences',
+
   // ---------------------------------------------------------------- about
   'about.previewEyebrow': 'About the temple',
   'about.previewTitle': 'A quiet courtyard, an old shrine, an unbroken practice',

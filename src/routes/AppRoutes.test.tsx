@@ -32,4 +32,24 @@ describe('AppRoutes', () => {
     renderAt('/contact');
     expect(screen.getByRole('button', { name: 'संदेश भेजें' })).toBeInTheDocument();
   });
+
+  it('renders the immersive Katha library with the seeded chapter', () => {
+    renderAt('/mahadev-katha/anubhav');
+    expect(screen.getByRole('heading', { level: 1, name: 'कथा अनुभव' })).toBeInTheDocument();
+    expect(screen.getByText('समुद्र मंथन और नीलकंठ महादेव')).toBeInTheDocument();
+  });
+
+  it('renders the Samudra Manthan comic chapter scene-by-scene, ending in the takeaways', () => {
+    renderAt('/mahadev-katha/anubhav/samudra-manthan-neelkanth');
+    expect(screen.getAllByText('समुद्र मंथन और नीलकंठ महादेव').length).toBeGreaterThan(0);
+    expect(screen.getByRole('heading', { level: 2, name: 'क्षीरसागर का मंथन' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: 'नीलकंठ का जन्म' })).toBeInTheDocument();
+    expect(screen.getByText('हर-हर महादेव')).toBeInTheDocument();
+    expect(screen.getByText('इस कथा से सीख')).toBeInTheDocument();
+  });
+
+  it('redirects an unknown Katha chapter slug back to the immersive library', () => {
+    renderAt('/mahadev-katha/anubhav/no-such-chapter');
+    expect(screen.getByRole('heading', { level: 1, name: 'कथा अनुभव' })).toBeInTheDocument();
+  });
 });
