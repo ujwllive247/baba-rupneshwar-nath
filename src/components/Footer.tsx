@@ -100,6 +100,22 @@ export function Footer() {
           <ul className="mt-3 flex gap-2">
             {socialPlaceholders.map((social) => {
               const Icon = SOCIAL_ICONS[social.id] ?? Facebook;
+              if (social.url) {
+                return (
+                  <li key={social.id}>
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={social.label}
+                      title={social.label}
+                      className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-sand-300 transition hover:bg-white/20 hover:text-white"
+                    >
+                      <Icon size={17} />
+                    </a>
+                  </li>
+                );
+              }
               return (
                 <li key={social.id}>
                   <span

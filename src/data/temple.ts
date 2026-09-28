@@ -71,9 +71,9 @@ export const directions: { id: string; labelKey: TranslationKey; detail: Bilingu
   },
 ];
 
-export const socialPlaceholders: { id: string; label: string }[] = [
+export const socialPlaceholders: { id: string; label: string; url?: string }[] = [
   { id: 'facebook', label: 'Facebook' },
-  { id: 'youtube', label: 'YouTube' },
+  { id: 'youtube', label: 'YouTube', url: 'https://www.youtube.com/@BabaRupneshwarNathMandir' },
   { id: 'instagram', label: 'Instagram' },
 ];
 
