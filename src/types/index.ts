@@ -36,6 +36,8 @@ export interface TempleEvent {
   contentEnglish: string[];
   image: string;
   imageAlt: Bilingual;
+  /** CSS object-position for the wide event-page banner crop, e.g. 'center 30%'. Defaults to centre. */
+  imageFocus?: string;
   /** ISO date, YYYY-MM-DD */
   date: string;
   /** ISO end date for multi-day events; optional. */

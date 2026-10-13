@@ -94,9 +94,12 @@ describe('Header — desktop Temple disclosure', () => {
 });
 
 describe('Header — navigation targets', () => {
-  it('links Visit Us to the contact page visit section', () => {
+  it('links Contact to the contact page, with no directions section link left', () => {
     renderAt('/');
-    expect(within(desktopNav()).getByRole('link', { name: 'Visit Us' })).toHaveAttribute('href', '/contact#visit');
+    expect(within(desktopNav()).getByRole('link', { name: 'Contact' })).toHaveAttribute('href', '/contact');
+    for (const link of screen.getAllByRole('link')) {
+      expect(link).not.toHaveAttribute('href', '/contact#visit');
+    }
   });
 
   it('no longer shows a Plan your visit button', () => {
@@ -159,15 +162,16 @@ describe('Header — mobile menu', () => {
 });
 
 describe('Footer', () => {
-  it('provides quick links, visit, contact and legal links', () => {
+  it('provides quick links, contact and legal links, without a directions section', () => {
     renderAt('/');
     const footer = screen.getByRole('contentinfo');
     const quick = within(footer).getByRole('navigation', { name: 'Quick links' });
 
-    for (const name of ['Home', 'About Temple', 'History', 'Events', 'Mahadev Katha', 'Gallery', 'Visit Us']) {
+    for (const name of ['Home', 'About Temple', 'History', 'Events', 'Mahadev Katha', 'Gallery']) {
       expect(within(quick).getByRole('link', { name })).toBeInTheDocument();
     }
-    expect(within(footer).getByRole('link', { name: 'Directions & map' })).toHaveAttribute('href', '/contact#visit');
+    expect(within(footer).queryByRole('link', { name: /directions/i })).not.toBeInTheDocument();
+    expect(within(footer).queryByRole('heading', { name: 'Visit Us' })).not.toBeInTheDocument();
     expect(within(footer).getByRole('link', { name: 'Contact page' })).toHaveAttribute('href', '/contact');
     expect(within(footer).getByRole('link', { name: 'Privacy Policy' })).toHaveAttribute('href', '/privacy');
     expect(within(footer).getByRole('link', { name: 'Terms of Use' })).toHaveAttribute('href', '/terms');

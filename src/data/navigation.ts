@@ -24,10 +24,6 @@ export interface NavGroupEntry {
 
 export type NavEntry = NavLinkEntry | NavGroupEntry;
 
-/** The directions + map section on the contact page. */
-export const VISIT_SECTION_ID = 'visit';
-export const VISIT_LINK: To = { pathname: PATHS.contact, hash: `#${VISIT_SECTION_ID}` };
-
 const link = (id: string, to: To, labelKey: TranslationKey, end?: boolean): NavLinkEntry => ({
   kind: 'link',
   id,
@@ -43,7 +39,7 @@ export const NAV_LINKS = {
   events: link('events', PATHS.events, 'nav.events'),
   katha: link('katha', PATHS.katha, 'nav.mahadevKatha'),
   gallery: link('gallery', PATHS.gallery, 'nav.gallery'),
-  visit: link('visit', VISIT_LINK, 'nav.visit'),
+  contact: link('contact', PATHS.contact, 'nav.contact'),
 } as const;
 
 export const PRIMARY_NAV: NavEntry[] = [
@@ -57,7 +53,7 @@ export const PRIMARY_NAV: NavEntry[] = [
   NAV_LINKS.events,
   NAV_LINKS.katha,
   NAV_LINKS.gallery,
-  NAV_LINKS.visit,
+  NAV_LINKS.contact,
 ];
 
 /** True when `pathname` is the link's page or one of its sub-pages. */

@@ -22,7 +22,6 @@ export const hi: Record<TranslationKey, string> = {
   'nav.temple': 'मंदिर',
   'nav.aboutTemple': 'मंदिर परिचय',
   'nav.mahadevKatha': 'महादेव कथा',
-  'nav.visit': 'पधारें',
   'nav.donate': 'दान करें',
 
   // ---------------------------------------------------------------- common
@@ -216,26 +215,20 @@ export const hi: Record<TranslationKey, string> = {
   'gallery.category.events': 'आयोजन',
 
   // ---------------------------------------------------------------- reach / contact
-  'reach.title': 'मंदिर तक कैसे पहुँचें',
-  'reach.subtitle': 'मंदिर सभी दर्शनार्थियों के लिए खुला है। पहुँचने का मार्ग इस प्रकार है।',
   'reach.address': 'पता',
-  'reach.landmark': 'निकटतम पहचान-स्थल',
-  'reach.directions': 'मार्ग निर्देश प्राप्त करें',
-  'reach.mapPlaceholder': 'मानचित्र',
-  'reach.mapNotice':
-    'मंदिर की सटीक स्थिति की पुष्टि होने पर यहाँ गूगल मानचित्र जोड़ा जाएगा।',
-  'reach.byRoad': 'सड़क मार्ग',
-  'reach.byRail': 'रेल मार्ग',
-  'reach.byAir': 'वायु मार्ग',
 
   'contact.pageTitle': 'संपर्क एवं स्थान',
   'contact.pageIntro':
-    'दर्शन, आयोजन अथवा सेवा से संबंधित जानकारी हेतु हमें लिखें या मंदिर कार्यालय पधारें।',
+    'बाबा रुपनेश्वर नाथ मंदिर में दर्शन, मंदिर से संबंधित जानकारी तथा अन्य आवश्यक सहायता के लिए आप मंदिर कार्यालय से संपर्क कर सकते हैं।',
   'contact.detailsHeading': 'संपर्क विवरण',
   'contact.phone': 'दूरभाष',
   'contact.email': 'ईमेल',
   'contact.officeHours': 'कार्यालय समय',
   'contact.visitingHeading': 'दर्शन संबंधी जानकारी',
+  'contact.visitingIntro':
+    'बाबा रुपनेश्वर नाथ मंदिर में आने वाले श्रद्धालुओं से अनुरोध है कि वे दर्शन के दौरान मंदिर परिसर की गरिमा बनाए रखें तथा अन्य श्रद्धालुओं की सुविधा का ध्यान रखें।',
+  'contact.visitingFootnote':
+    'कृपया ध्यान दें कि विशेष सुविधाओं, प्रवेश व्यवस्था और आयोजन संबंधी नियमों की पुष्टि मंदिर कार्यालय से कर लें।',
   'contact.formHeading': 'हमें संदेश भेजें',
   'contact.formIntro': 'नीचे दिया प्रपत्र भरें, मंदिर कार्यालय आपसे संपर्क करेगा।',
   'contact.form.name': 'पूरा नाम',
@@ -274,8 +267,6 @@ export const hi: Record<TranslationKey, string> = {
   'footer.events': 'आयोजन',
   'footer.noEvents': 'नए आयोजनों की सूचना यहाँ दी जाएगी।',
   'footer.allEvents': 'सभी आयोजन',
-  'footer.visitUs': 'पधारें',
-  'footer.directions': 'मार्ग एवं मानचित्र',
   'footer.contact': 'संपर्क',
   'footer.contactPage': 'संपर्क पृष्ठ',
   'footer.legal': 'नीतियाँ',

@@ -14,7 +14,7 @@ export function Layout() {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior });
   }, [pathname]);
 
-  // A hash link (e.g. /contact#visit) lands on its section and moves focus there, as a native anchor would.
+  // A hash link (e.g. /donate#donate-form) lands on its section and moves focus there, as a native anchor would.
   useEffect(() => {
     if (!hash) return;
     const target = document.getElementById(decodeURIComponent(hash.slice(1)));

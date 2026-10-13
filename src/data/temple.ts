@@ -27,12 +27,8 @@ export interface SourceReference {
 
 export const templeInfo = {
   address: {
-    hi: 'बाबा रुपनेश्वर नाथ मंदिर, एयरपोर्ट रोड, भौवाड़ा, मधुबनी, बिहार — 847212',
-    en: 'Baba Rupneshwar Nath Temple, Airport road, Bhauwara, Madhubani, Bihar — 847212',
-  } satisfies Bilingual,
-  landmark: {
-    hi: '[निकटतम चौराहा / बस स्टैंड का नाम] से लगभग 1 किलोमीटर',
-    en: 'About 1 km from [nearest crossing / bus stand]',
+    hi: 'बाबा रुपनेश्वर नाथ मंदिर, एयरपोर्ट रोड, वार्ड नं. 35, भौवाड़ा, मधुबनी, बिहार — 847212',
+    en: 'Baba Rupneshwar Nath Temple, Airport Road, Ward No. 35, Bhauwara, Madhubani, Bihar — 847212',
   } satisfies Bilingual,
   phone: '+91 9472507877',
   email: 'info@babarupneshwarnath.com',
@@ -40,36 +36,7 @@ export const templeInfo = {
     hi: 'प्रतिदिन प्रातः 8:00 से सायं 6:00 तक',
     en: 'Daily, 8:00 AM to 6:00 PM',
   } satisfies Bilingual,
-  /** Used to build a Google Maps search link until exact coordinates are confirmed. */
-  mapQuery: 'Baba Rupneshwar Nath Temple, Airport Road, Bhauwara, Madhubani, Bihar 847212',
 } as const;
-
-export const directions: { id: string; labelKey: TranslationKey; detail: Bilingual }[] = [
-  {
-    id: 'road',
-    labelKey: 'reach.byRoad',
-    detail: {
-      hi: 'मुख्य मार्ग से मंदिर तक पक्की सड़क है। निजी वाहन के लिए मंदिर परिसर के पास पार्किंग उपलब्ध है। स्थानीय बस एवं ऑटो सेवा दिनभर उपलब्ध रहती है।',
-      en: 'A metalled road runs from the main highway to the temple. Parking is available near the temple compound, and local buses and autos run through the day.',
-    },
-  },
-  {
-    id: 'rail',
-    labelKey: 'reach.byRail',
-    detail: {
-      hi: 'निकटतम रेलवे स्टेशन [स्टेशन का नाम] है, जो मंदिर से लगभग [दूरी] की दूरी पर है। स्टेशन से ऑटो एवं टैक्सी उपलब्ध हैं।',
-      en: 'The nearest railway station is [station name], roughly [distance] from the temple. Autos and taxis are available outside the station.',
-    },
-  },
-  {
-    id: 'air',
-    labelKey: 'reach.byAir',
-    detail: {
-      hi: 'निकटतम हवाई अड्डा [हवाई अड्डे का नाम] है, जो लगभग [दूरी] दूर है। वहाँ से टैक्सी द्वारा मंदिर तक पहुँचा जा सकता है।',
-      en: 'The nearest airport is [airport name], about [distance] away, from where the temple is reachable by taxi.',
-    },
-  },
-];
 
 export const socialPlaceholders: { id: string; label: string; url?: string }[] = [
   { id: 'facebook', label: 'Facebook' },
@@ -298,21 +265,54 @@ export const historySources: SourceReference[] = [
 
 // ---------------------------------------------------------------- Contact page
 
-export const visitingNotes: Bilingual[] = [
+/** Visitor guidance on the contact page — a short label plus the guidance itself. */
+export const visitingNotes: { id: string; title: Bilingual; text: Bilingual }[] = [
   {
-    hi: 'दर्शन निःशुल्क है। किसी भी प्रकार के शुल्क की माँग की सूचना मंदिर कार्यालय को दें।',
-    en: 'Darshan is free of charge. Please report any demand for a fee to the temple office.',
+    id: 'darshan',
+    title: { hi: 'दर्शन', en: 'Darshan' },
+    text: {
+      hi: 'सामान्य दर्शन के लिए किसी शुल्क की जानकारी उपलब्ध नहीं है। विशेष आयोजन या अन्य सेवाओं के संबंध में मंदिर कार्यालय से पुष्टि करें।',
+      en: 'No fee is known to apply for general darshan. For special events or other services, please confirm with the temple office.',
+    },
   },
   {
-    hi: 'मंदिर परिसर में प्रवेश से पूर्व पादुकाएँ निर्धारित स्थान पर रखें।',
-    en: 'Footwear should be left at the designated stand before entering the compound.',
+    id: 'footwear',
+    title: { hi: 'पादुका रखने की व्यवस्था', en: 'Footwear' },
+    text: {
+      hi: 'मंदिर परिसर में उपलब्ध निर्धारित स्थान पर अपनी पादुकाएँ रखें।',
+      en: 'Please leave your footwear at the designated place in the temple compound.',
+    },
   },
   {
-    hi: 'दिव्यांग एवं वृद्ध आगंतुकों के लिए प्रवेश द्वार के पास सहायता उपलब्ध है।',
-    en: 'Assistance is available near the entrance for elderly visitors and visitors with disabilities.',
+    id: 'cleanliness',
+    title: { hi: 'स्वच्छता', en: 'Cleanliness' },
+    text: {
+      hi: 'मंदिर परिसर को स्वच्छ बनाए रखने में सहयोग करें।',
+      en: 'Please help keep the temple compound clean.',
+    },
   },
   {
-    hi: 'बड़े आयोजनों में समूह दर्शन हेतु कृपया कम से कम एक सप्ताह पूर्व कार्यालय से संपर्क करें।',
-    en: 'For group darshan during large gatherings, please contact the office at least a week in advance.',
+    id: 'conduct',
+    title: { hi: 'सम्मान एवं अनुशासन', en: 'Respect and conduct' },
+    text: {
+      hi: 'पूजा-पाठ और दर्शन के दौरान शांति एवं धार्मिक मर्यादा बनाए रखें।',
+      en: 'Please maintain silence and religious decorum during worship and darshan.',
+    },
+  },
+  {
+    id: 'occasions',
+    title: { hi: 'विशेष अवसर', en: 'Special occasions' },
+    text: {
+      hi: 'त्योहारों, धार्मिक आयोजनों या समूह में दर्शन के लिए आने से पहले मंदिर कार्यालय से संपर्क करें।',
+      en: 'Before coming for festivals, religious events or group darshan, please contact the temple office.',
+    },
+  },
+  {
+    id: 'help',
+    title: { hi: 'सहायता एवं जानकारी', en: 'Help and information' },
+    text: {
+      hi: 'दर्शन संबंधी किसी भी प्रश्न के लिए मंदिर कार्यालय से संपर्क किया जा सकता है।',
+      en: 'For any question about darshan, you can contact the temple office.',
+    },
   },
 ];

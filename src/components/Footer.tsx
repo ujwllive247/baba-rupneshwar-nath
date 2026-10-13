@@ -5,7 +5,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { PATHS } from '@/routes/paths';
 import { templeInfo, socialPlaceholders } from '@/data/temple';
 import { upcomingEvents } from '@/data/events';
-import { NAV_LINKS, VISIT_LINK } from '@/data/navigation';
+import { NAV_LINKS } from '@/data/navigation';
 import { formatDateRange } from '@/utils/format';
 import { TempleMark } from './TempleMark';
 
@@ -16,7 +16,6 @@ const QUICK_LINKS = [
   NAV_LINKS.events,
   NAV_LINKS.katha,
   NAV_LINKS.gallery,
-  NAV_LINKS.visit,
 ];
 
 const SOCIAL_ICONS: Record<string, typeof Facebook> = {
@@ -101,7 +100,7 @@ export function Footer() {
           </ul>
         </nav>
 
-        {/* Events + Visit Us */}
+        {/* Events */}
         <div className="space-y-8 lg:col-span-3">
           <section aria-labelledby="footer-events">
             <h2 id="footer-events" className={headingClass}>
@@ -130,15 +129,6 @@ export function Footer() {
             )}
             <FooterLink to={PATHS.events} arrow>
               {t('footer.allEvents')}
-            </FooterLink>
-          </section>
-
-          <section aria-labelledby="footer-visit">
-            <h2 id="footer-visit" className={headingClass}>
-              {t('footer.visitUs')}
-            </h2>
-            <FooterLink to={VISIT_LINK} arrow>
-              {t('footer.directions')}
             </FooterLink>
           </section>
         </div>

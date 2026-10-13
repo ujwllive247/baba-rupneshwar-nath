@@ -12,9 +12,7 @@ import { AnnouncementStrip } from '@/components/AnnouncementStrip';
 import { EventCarousel } from '@/components/EventCarousel';
 import { StoryCard } from '@/components/StoryCard';
 import { SectionHeading } from '@/components/SectionHeading';
-import { MapSection } from '@/components/MapSection';
 import { PlaceholderNotice } from '@/components/PlaceholderNotice';
-import { templeInfo, directions } from '@/data/temple';
 
 export default function Home() {
   const { t, pick } = useLanguage();
@@ -39,7 +37,7 @@ export default function Home() {
         'An ancient seat of Shiva worship where devotees gather each day for darshan, aarti and quiet prayer.',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Airport Road, Bhauwara',
+        streetAddress: 'Airport Road, Ward No. 35, Bhauwara',
         addressLocality: 'Madhubani',
         addressRegion: 'Bihar',
         postalCode: '847212',
@@ -287,38 +285,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --------------------------------------------------------------- Visit Us
-          UI-008 — tonal strip; address, landmark, directions, map placeholder. */}
-      <section className="bg-sand-100/70 py-16 sm:py-20">
-        <div className="container-page">
-          <SectionHeading eyebrow={t('reach.title')} title={t('reach.title')} subtitle={t('reach.subtitle')} />
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
-            <div className="space-y-4">
-              <div className="card p-5">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-500">
-                  {t('reach.address')}
-                </h3>
-                <p className="mt-1.5 text-ink-800">{pick(templeInfo.address)}</p>
-              </div>
-              <div className="card p-5">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-ink-500">
-                  {t('reach.landmark')}
-                </h3>
-                <p className="mt-1.5 text-ink-800">{pick(templeInfo.landmark)}</p>
-              </div>
-              <div className="card divide-y divide-sand-200 p-5">
-                {directions.map((item) => (
-                  <div key={item.id} className="py-3 first:pt-0 last:pb-0">
-                    <h3 className="text-sm font-semibold text-ink-800">{t(item.labelKey)}</h3>
-                    <p className="mt-1 text-sm text-ink-500">{pick(item.detail)}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <MapSection />
-          </div>
-        </div>
-      </section>
     </>
   );
 }

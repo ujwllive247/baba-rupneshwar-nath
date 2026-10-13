@@ -40,6 +40,7 @@ export default function EventDetails() {
           <img
             src={event.image}
             alt={pick(event.imageAlt)}
+            style={event.imageFocus ? { objectPosition: event.imageFocus } : undefined}
             className="aspect-[16/8] w-full object-cover sm:aspect-[16/6]"
           />
         </div>

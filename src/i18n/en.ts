@@ -23,7 +23,6 @@ export const en = {
   'nav.temple': 'Temple',
   'nav.aboutTemple': 'About Temple',
   'nav.mahadevKatha': 'Mahadev Katha',
-  'nav.visit': 'Visit Us',
   'nav.donate': 'Donate',
 
   // ---------------------------------------------------------------- common
@@ -218,26 +217,20 @@ export const en = {
   'gallery.category.events': 'Events',
 
   // ---------------------------------------------------------------- reach / contact
-  'reach.title': 'How to Reach',
-  'reach.subtitle': 'The temple is open to all visitors. Here is how to find us.',
   'reach.address': 'Address',
-  'reach.landmark': 'Nearby landmark',
-  'reach.directions': 'Get directions',
-  'reach.mapPlaceholder': 'Map',
-  'reach.mapNotice':
-    'An interactive Google Map will be embedded here once the temple’s exact coordinates are confirmed.',
-  'reach.byRoad': 'By road',
-  'reach.byRail': 'By rail',
-  'reach.byAir': 'By air',
 
   'contact.pageTitle': 'Contact & Location',
   'contact.pageIntro':
-    'For queries about darshan, events or seva, please write to us or visit the temple office.',
+    'For darshan at Baba Rupneshwar Nath Temple, information about the temple, or any other help you need, you can contact the temple office.',
   'contact.detailsHeading': 'Contact details',
   'contact.phone': 'Phone',
   'contact.email': 'Email',
   'contact.officeHours': 'Office hours',
   'contact.visitingHeading': 'Visiting information',
+  'contact.visitingIntro':
+    'Devotees visiting Baba Rupneshwar Nath Temple are requested to uphold the dignity of the temple compound during darshan and to be considerate of other devotees.',
+  'contact.visitingFootnote':
+    'Please confirm special facilities, entry arrangements and event rules with the temple office.',
   'contact.formHeading': 'Send us a message',
   'contact.formIntro': 'Fill in the form and the temple office will get back to you.',
   'contact.form.name': 'Full name',
@@ -276,8 +269,6 @@ export const en = {
   'footer.events': 'Events',
   'footer.noEvents': 'New events will be announced here.',
   'footer.allEvents': 'All events',
-  'footer.visitUs': 'Visit Us',
-  'footer.directions': 'Directions & map',
   'footer.contact': 'Contact',
   'footer.contactPage': 'Contact page',
   'footer.legal': 'Legal',

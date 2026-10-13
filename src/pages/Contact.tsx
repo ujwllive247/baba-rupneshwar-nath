@@ -1,12 +1,10 @@
-import { Clock, Mail, MapPin, Phone } from 'lucide-react';
+import { Clock, Info, Mail, MapPin, Phone } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import { PATHS } from '@/routes/paths';
-import { VISIT_SECTION_ID } from '@/data/navigation';
-import { templeInfo, directions, visitingNotes } from '@/data/temple';
+import { templeInfo, visitingNotes } from '@/data/temple';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { PageHero } from '@/components/PageHero';
-import { MapSection } from '@/components/MapSection';
 import { ContactForm } from '@/components/ContactForm';
 
 export default function Contact() {
@@ -68,29 +66,21 @@ export default function Contact() {
 
           <section>
             <h2 className="text-xl font-semibold text-ink-900">{t('contact.visitingHeading')}</h2>
-            <ul className="mt-4 space-y-2.5 text-sm text-ink-600">
-              {visitingNotes.map((note, index) => (
-                <li key={index} className="flex gap-2.5">
+            <p className="mt-3 text-sm leading-relaxed text-ink-600">{t('contact.visitingIntro')}</p>
+            <ul className="mt-4 space-y-3 text-sm text-ink-600">
+              {visitingNotes.map((note) => (
+                <li key={note.id} className="flex gap-2.5">
                   <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-saffron-500" />
-                  <span>{pick(note)}</span>
+                  <span>
+                    <strong className="font-semibold text-ink-800">{pick(note.title)}:</strong> {pick(note.text)}
+                  </span>
                 </li>
               ))}
             </ul>
-          </section>
-
-          <section id={VISIT_SECTION_ID} className="scroll-mt-24 focus:outline-none">
-            <h2 className="text-xl font-semibold text-ink-900">{t('reach.title')}</h2>
-            <div className="mt-4 divide-y divide-sand-200 rounded-2xl border border-sand-200 bg-white shadow-soft">
-              {directions.map((item) => (
-                <div key={item.id} className="p-4">
-                  <h3 className="text-sm font-semibold text-ink-800">{t(item.labelKey)}</h3>
-                  <p className="mt-1 text-sm text-ink-500">{pick(item.detail)}</p>
-                </div>
-              ))}
-            </div>
-            <div className="mt-4">
-              <MapSection />
-            </div>
+            <p className="mt-5 flex gap-2.5 rounded-xl border border-saffron-200 bg-saffron-50 p-3.5 text-sm text-ink-700">
+              <Info aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-saffron-600" />
+              <span>{t('contact.visitingFootnote')}</span>
+            </p>
           </section>
         </div>
 
