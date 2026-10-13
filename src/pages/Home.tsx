@@ -5,7 +5,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { usePageMeta } from '@/hooks/usePageMeta';
 import { PATHS, SITE_URL } from '@/routes/paths';
 import { announcements } from '@/data/announcements';
-import { upcomingEvents } from '@/data/events';
+import { EVENTS_ARE_SAMPLE_DATA, upcomingEvents } from '@/data/events';
 import { featuredStory, latestStories } from '@/data/stories';
 import { galleryImages } from '@/data/gallery';
 import { AnnouncementStrip } from '@/components/AnnouncementStrip';
@@ -13,8 +13,8 @@ import { EventCarousel } from '@/components/EventCarousel';
 import { StoryCard } from '@/components/StoryCard';
 import { SectionHeading } from '@/components/SectionHeading';
 import { MapSection } from '@/components/MapSection';
+import { PlaceholderNotice } from '@/components/PlaceholderNotice';
 import { templeInfo, directions } from '@/data/temple';
-import { VISIT_LINK } from '@/data/navigation';
 
 export default function Home() {
   const { t, pick } = useLanguage();
@@ -98,9 +98,6 @@ export default function Home() {
 
           {/* Primary CTAs */}
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <NavLink to={VISIT_LINK} className="btn-primary">
-              {t('hero.ctaPrimary')}
-            </NavLink>
             <NavLink
               to={PATHS.katha}
               className="btn-outline border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white"
@@ -124,19 +121,20 @@ export default function Home() {
       {topAnnouncement && <AnnouncementStrip announcement={topAnnouncement} />}
 
       {/* --------------------------------------------------------------- Events
-          UI-004 — horizontal scroll-snap carousel; unchanged from Phase 0. */}
+          UI-004 — manual scroll-snap carousel (1 / 2 / 3 cards by breakpoint,
+          no autoplay). Event data lives in src/data/events.ts. */}
       <section className="bg-sand-100/70 py-16 sm:py-20">
         <div className="container-page">
           <SectionHeading eyebrow={t('nav.events')} title={t('events.title')} subtitle={t('events.subtitle')} />
+          {EVENTS_ARE_SAMPLE_DATA && (
+            <PlaceholderNotice message={t('events.sampleNotice')} className="mt-5 max-w-2xl" />
+          )}
         </div>
         <div className="container-page mt-8">
           <EventCarousel events={upcomingEvents} />
         </div>
-        <div className="container-page mt-8">
-          <NavLink
-            to={PATHS.events}
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-saffron-700 hover:text-saffron-800"
-          >
+        <div className="container-page mt-8 flex justify-center">
+          <NavLink to={PATHS.events} className="btn-outline">
             {t('events.allEvents')}
             <ArrowRight aria-hidden="true" size={16} />
           </NavLink>

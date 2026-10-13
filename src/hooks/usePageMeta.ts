@@ -12,6 +12,8 @@ export interface PageMeta {
   image?: string;
   type?: 'website' | 'article';
   publishedTime?: string;
+  /** Keeps transactional pages (payment, confirmation) out of search results. */
+  noindex?: boolean;
 }
 
 function upsertMeta(attr: 'name' | 'property', key: string, content: string) {
@@ -48,6 +50,7 @@ export function usePageMeta({
   image = '/images/hero-temple.svg',
   type = 'website',
   publishedTime,
+  noindex = false,
 }: PageMeta) {
   const { t, lang } = useLanguage();
   const siteName = t('site.nameFull');
@@ -60,6 +63,7 @@ export function usePageMeta({
     document.title = fullTitle;
     upsertMeta('name', 'description', description);
     upsertCanonical(url);
+    upsertMeta('name', 'robots', noindex ? 'noindex, nofollow' : 'index, follow');
 
     upsertMeta('property', 'og:site_name', siteName);
     upsertMeta('property', 'og:title', fullTitle);
@@ -77,5 +81,5 @@ export function usePageMeta({
     if (publishedTime) {
       upsertMeta('property', 'article:published_time', publishedTime);
     }
-  }, [title, description, path, image, type, publishedTime, siteName, lang]);
+  }, [title, description, path, image, type, publishedTime, noindex, siteName, lang]);
 }

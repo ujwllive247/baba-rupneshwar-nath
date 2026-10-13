@@ -13,6 +13,9 @@ export const PATHS = {
   contact: '/contact',
   privacy: '/privacy',
   terms: '/terms',
+  donate: '/donate',
+  donatePayment: (donationId: string) => `/donate/payment/${donationId}`,
+  donateConfirmation: (donationId: string) => `/donate/confirmation/${donationId}`,
 } as const;
 
 export const SITE_URL = 'https://babarupneshwarnath.com';

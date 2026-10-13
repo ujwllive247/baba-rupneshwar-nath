@@ -94,10 +94,14 @@ describe('Header — desktop Temple disclosure', () => {
 });
 
 describe('Header — navigation targets', () => {
-  it('links Visit Us and the Plan your visit CTA to the contact page visit section', () => {
+  it('links Visit Us to the contact page visit section', () => {
     renderAt('/');
     expect(within(desktopNav()).getByRole('link', { name: 'Visit Us' })).toHaveAttribute('href', '/contact#visit');
-    expect(screen.getAllByRole('link', { name: 'Plan your visit' })[0]).toHaveAttribute('href', '/contact#visit');
+  });
+
+  it('no longer shows a Plan your visit button', () => {
+    renderAt('/');
+    expect(screen.queryByRole('link', { name: 'Plan your visit' })).not.toBeInTheDocument();
   });
 
   it('no longer links to the removed Darshan & Aarti page', () => {

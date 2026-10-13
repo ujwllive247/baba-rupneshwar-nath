@@ -139,3 +139,17 @@
     display: none;
   }
 }
+
+/* Seva Confirmation print view: only the certificate, no site chrome. */
+@media print {
+  body:has(.seva-confirmation) #root > div > header,
+  body:has(.seva-confirmation) #root > div > footer,
+  body:has(.seva-confirmation) #root > div > a {
+    display: none !important;
+  }
+
+  .seva-confirmation {
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+}

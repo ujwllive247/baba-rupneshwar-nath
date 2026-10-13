@@ -5,6 +5,9 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY . .
+# Off by default, matching the public site; see src/data/donationConfig.ts.
+ARG VITE_DONATIONS_ENABLED=false
+ENV VITE_DONATIONS_ENABLED=$VITE_DONATIONS_ENABLED
 RUN npm run build
 
 FROM nginx:1.27-alpine AS runtime

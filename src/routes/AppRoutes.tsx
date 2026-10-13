@@ -1,3 +1,4 @@
+import { lazy, Suspense, type ReactNode } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
 import Home from '@/pages/Home';
@@ -14,6 +15,16 @@ import Contact from '@/pages/Contact';
 import Privacy from '@/pages/Privacy';
 import Terms from '@/pages/Terms';
 import NotFound from '@/pages/NotFound';
+import { DONATIONS_ENABLED } from '@/data/donationConfig';
+
+// The donation module is split into its own chunk so it adds nothing to the main bundle.
+const Donate = lazy(() => import('@/pages/Donate'));
+const DonatePayment = lazy(() => import('@/pages/DonatePayment'));
+const DonateConfirmation = lazy(() => import('@/pages/DonateConfirmation'));
+
+function Lazy({ children }: { children: ReactNode }) {
+  return <Suspense fallback={<div className="min-h-[60vh]" aria-busy="true" />}>{children}</Suspense>;
+}
 
 export function AppRoutes() {
   return (
@@ -32,6 +43,13 @@ export function AppRoutes() {
         <Route path="contact" element={<Contact />} />
         <Route path="privacy" element={<Privacy />} />
         <Route path="terms" element={<Terms />} />
+        {DONATIONS_ENABLED && (
+          <>
+            <Route path="donate" element={<Lazy><Donate /></Lazy>} />
+            <Route path="donate/payment/:donationId" element={<Lazy><DonatePayment /></Lazy>} />
+            <Route path="donate/confirmation/:donationId" element={<Lazy><DonateConfirmation /></Lazy>} />
+          </>
+        )}
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

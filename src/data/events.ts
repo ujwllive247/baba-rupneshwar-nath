@@ -9,6 +9,13 @@ import type { TempleEvent } from '@/types';
 
 type EventSeed = Omit<TempleEvent, 'status'>;
 
+/**
+ * True while `seeds` below are illustrative samples. The homepage shows a
+ * visible "not yet confirmed" notice while this is set — switch it to false
+ * only once the list is replaced with temple-committee-approved events.
+ */
+export const EVENTS_ARE_SAMPLE_DATA = true;
+
 function startOfToday(): Date {
   const now = new Date();
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());

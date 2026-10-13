@@ -1,16 +1,16 @@
 import { useCallback, useEffect, useId, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { ChevronDown, MapPin, Menu, X } from 'lucide-react';
+import { ChevronDown, HandHeart, Menu, X } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { PATHS } from '@/routes/paths';
 import {
-  HEADER_CTA,
   PRIMARY_NAV,
   isGroupActive,
   type NavGroupEntry,
   type NavLinkEntry,
 } from '@/data/navigation';
 import { cn } from '@/utils/cn';
+import { DONATIONS_ENABLED } from '@/data/donationConfig';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { TempleMark } from './TempleMark';
 
@@ -157,13 +157,15 @@ export function Header() {
 
           <div className="flex shrink-0 items-center gap-2">
             <LanguageSwitcher className="hidden sm:inline-flex" />
-            <NavLink
-              to={HEADER_CTA.to}
-              className="btn-primary hidden whitespace-nowrap px-4 py-2.5 md:inline-flex"
-            >
-              <MapPin aria-hidden="true" size={16} className="hidden xl:block" />
-              {t(HEADER_CTA.labelKey)}
-            </NavLink>
+            {DONATIONS_ENABLED && (
+              <NavLink
+                to={PATHS.donate}
+                className="btn-primary hidden whitespace-nowrap px-4 py-2.5 md:inline-flex"
+              >
+                <HandHeart aria-hidden="true" size={16} className="hidden xl:block" />
+                {t('nav.donate')}
+              </NavLink>
+            )}
             <button
               ref={toggleRef}
               type="button"
@@ -204,14 +206,16 @@ export function Header() {
                 )}
               </ul>
               <div className="mt-4 flex flex-col gap-4 border-t border-sand-200 px-1 pt-4">
-                <NavLink
-                  to={HEADER_CTA.to}
-                  onClick={() => closeMenu(false)}
-                  className="btn-primary min-h-12 w-full"
-                >
-                  <MapPin aria-hidden="true" size={18} />
-                  {t(HEADER_CTA.labelKey)}
-                </NavLink>
+                {DONATIONS_ENABLED && (
+                  <NavLink
+                    to={PATHS.donate}
+                    onClick={() => closeMenu(false)}
+                    className="btn-primary min-h-12 w-full"
+                  >
+                    <HandHeart aria-hidden="true" size={18} />
+                    {t('nav.donate')}
+                  </NavLink>
+                )}
                 <LanguageSwitcher size="touch" className="self-start" />
               </div>
             </nav>

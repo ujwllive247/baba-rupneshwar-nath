@@ -60,9 +60,6 @@ export const PRIMARY_NAV: NavEntry[] = [
   NAV_LINKS.visit,
 ];
 
-/** The header call to action. */
-export const HEADER_CTA = link('plan-visit', VISIT_LINK, 'nav.planVisit');
-
 /** True when `pathname` is the link's page or one of its sub-pages. */
 export function isPathActive(pathname: string, entry: NavLinkEntry): boolean {
   const target = typeof entry.to === 'string' ? entry.to : (entry.to.pathname ?? '');
