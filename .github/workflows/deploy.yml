@@ -32,6 +32,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Donation module is live as a demo (dummy payments, sample figures);
+          # set to 'false' to hide it again. See src/data/donationConfig.ts.
+          VITE_DONATIONS_ENABLED: 'true'
 
       - name: Add SPA fallback for client-side routing
         run: cp dist/index.html dist/404.html
