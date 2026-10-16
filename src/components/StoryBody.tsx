@@ -15,7 +15,11 @@ export function StoryBody({ blocks }: StoryBodyProps) {
         const key = `${block.type}-${index}`;
         switch (block.type) {
           case 'heading':
-            return (
+            return block.level === 3 ? (
+              <h3 key={key} className="!mt-8 text-lg font-semibold text-ink-900">
+                {pick(block)}
+              </h3>
+            ) : (
               <h2 key={key} className="!mt-10 text-xl font-semibold text-ink-900">
                 {pick(block)}
               </h2>
@@ -34,17 +38,27 @@ export function StoryBody({ blocks }: StoryBodyProps) {
                 )}
               </blockquote>
             );
-          case 'list':
+          case 'list': {
+            const List = block.ordered ? 'ol' : 'ul';
             return (
-              <ul key={key} className="list-disc space-y-1.5 pl-5">
+              <List key={key} className={`${block.ordered ? 'list-decimal' : 'list-disc'} space-y-1.5 pl-5`}>
                 {block.items.map((item, itemIndex) => (
-                  <li key={itemIndex}>{pick(item)}</li>
+                  <li key={itemIndex}>
+                    {item.label && <strong className="font-semibold text-ink-800">{pick(item.label)}: </strong>}
+                    {pick(item)}
+                  </li>
                 ))}
-              </ul>
+              </List>
             );
+          }
           case 'paragraph':
           default:
-            return <p key={key}>{pick(block)}</p>;
+            return (
+              <p key={key}>
+                {block.label && <strong className="font-semibold text-ink-800">{pick(block.label)}: </strong>}
+                {pick(block)}
+              </p>
+            );
         }
       })}
     </div>

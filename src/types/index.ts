@@ -64,10 +64,10 @@ export type StoryCategory =
 
 /** One block of article body copy. Keeps content data free of raw HTML. */
 export type StoryBlock =
-  | { type: 'paragraph'; hi: string; en: string }
-  | { type: 'heading'; hi: string; en: string }
+  | { type: 'paragraph'; hi: string; en: string; /** Bold lead-in, e.g. "Location". */ label?: Bilingual }
+  | { type: 'heading'; hi: string; en: string; /** 2 (default) for sections, 3 for sub-sections. */ level?: 2 | 3 }
   | { type: 'quote'; hi: string; en: string; attribution?: Bilingual }
-  | { type: 'list'; items: Bilingual[] };
+  | { type: 'list'; items: (Bilingual & { label?: Bilingual })[]; ordered?: boolean };
 
 export interface Story {
   id: string;
